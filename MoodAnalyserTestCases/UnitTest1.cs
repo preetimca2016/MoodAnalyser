@@ -16,21 +16,35 @@ namespace MoodAnalyserTestCases
         public void GivenMessage_WhenSad_ShouldReturnSad_DefaultConstructor()
         {
             //arrange
-            moodanalyser = new MoodAnalyser();
+            MoodAnalyser moodanalyser = new MoodAnalyser();
             string Message = "I Am In a Sad Mood";
             //act
             string result = moodanalyser.AnalyserMoodwithconstructor(Message);
             //assert
             Assert.AreEqual("SAD", result);
-
-
         }
         [Test]
         public void GivenMessage_WhenSad_ShouldReturnHappy_DefaultConstructor()
         {
-            moodanalyser = new MoodAnalyser();
+            MoodAnalyser moodanalyser = new MoodAnalyser();
             string Message = "I Am In Happy Mood";
             string result = moodanalyser.AnalyserMoodwithconstructor(Message);
+            Assert.AreEqual("HAPPY", result);
+        }
+        [Test]
+        public void GivenMessage_WhenSad_ShouldReturnSadParameterisedConstructor()
+        {
+            MoodAnalyser moodanalyser = new MoodAnalyser();
+            string Message = "I am in Sad Mood";
+            string result = moodanalyser.AnalyserMoodwithparameterizedconstructor(Message);
+            Assert.AreEqual("SAD", result);
+        }
+        [Test]
+        public void GivenMessage_WhenSad_ShouldReturnHappyParameterisedConstructor()
+        {
+            MoodAnalyser moodanalyser = new MoodAnalyser();
+            string Message = "I am in Happy Mood";
+            string result = moodanalyser.AnalyserMoodwithparameterizedconstructor(Message);
             Assert.AreEqual("HAPPY", result);
         }
     }

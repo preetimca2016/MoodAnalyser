@@ -40,6 +40,6 @@ namespace MoodAnalyserTestCases
             {
                 return "HAPPY";
             }
-        }
+        }       
     }
 }
