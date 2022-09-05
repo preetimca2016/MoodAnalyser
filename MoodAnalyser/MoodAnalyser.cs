@@ -22,7 +22,6 @@ namespace MoodAnalyserTestCases
             if (Message.ToLower().Contains("sad"))
             {
                 return "SAD";
-
             }
             else
             {
