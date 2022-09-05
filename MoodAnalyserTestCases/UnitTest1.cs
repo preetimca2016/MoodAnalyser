@@ -47,5 +47,14 @@ namespace MoodAnalyserTestCases
             string result = moodanalyser.AnalyserMoodwithparameterizedconstructor(Message);
             Assert.AreEqual("HAPPY", result);
         }
+         //UC2:Handle Null exception
+        [Test]
+        public void GivenMessage_WhenHappy_ShouldReturnHappy()
+        {
+            moodanalyser = new MoodAnalyser();
+            string Message = "I am in Happy Mood";
+            string result = moodanalyser.AnalyseMoodReturnHappy(Message);
+            Assert.AreEqual("HAPPY", result);
+        }
     }
 }
