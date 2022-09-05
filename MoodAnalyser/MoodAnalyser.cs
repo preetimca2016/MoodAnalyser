@@ -28,6 +28,17 @@ namespace MoodAnalyserTestCases
             {
                 return "HAPPY";
             }
-        }
+        }public string AnalyserMoodwithparameterizedconstructor(string Message)
+        {
+            if (Message.ToLower().Contains("sad"))
+            {
+                return "SAD";
+
+            }
+            else
+            {
+                return "HAPPY";
+            }
+        }        
     }
 }
