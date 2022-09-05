@@ -40,6 +40,21 @@ namespace MoodAnalyserTestCases
             {
                 return "HAPPY";
             }
-        }       
+        } 
+        public string AnalyseMoodReturnHappy(string Message)
+        {
+            try
+            {
+                if (Message.ToLower().Contains("sad"))
+                    return "SAD";
+
+                else
+                    return "HAPPY";
+            }
+            catch (NullReferenceException)
+            {
+                return "HAPPY";
+            }
+        }
     }
 }
