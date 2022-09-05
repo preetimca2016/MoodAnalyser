@@ -22,7 +22,6 @@ namespace MoodAnalyserTestCases
             if (Message.ToLower().Contains("sad"))
             {
                 return "SAD";
-
             }
             else
             {
@@ -34,12 +33,42 @@ namespace MoodAnalyserTestCases
             if (Message.ToLower().Contains("sad"))
             {
                 return "SAD";
-
             }
             else
             {
                 return "HAPPY";
             }
-        }       
+        }
+        public string AnalyseMoodReturnHappy(string Message)
+        {
+            try
+            {
+                if (Message.ToLower().Contains("sad"))
+                    return "SAD";
+
+                else
+                    return "HAPPY";
+            }
+            catch (NullReferenceException)
+            {
+                return "HAPPY";
+            }
+        }
+        public string AnalyseMood()
+        {
+            try
+            {
+                if (Message.ToLower().Contains("sad"))
+                    return "SAD";
+                else if (Message.Equals(string.Empty))
+                    throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.EMPTY_MOOD, "MOOD should not be Empty");
+                else
+                    return "HAPPY";
+            }
+            catch (NullReferenceException)
+            {
+                throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NULL_MOOD, "MOOD should not be Null");
+            }
+        }
     }
 }

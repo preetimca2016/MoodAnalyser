@@ -1,4 +1,4 @@
-﻿namespace MoodAnalyserTest
+﻿namespace MoodAnalyserTestases
 {
     internal class Program
     {
